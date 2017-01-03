@@ -5,33 +5,18 @@
   <meta charset="utf-8">
   <title>Reponsive IFrame</title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!--<script type="text/javascript" src="jquery.jsonpi.js"></script>-->
   </style>
 </head>
 
-<body>
-  <!--<div class="intrinsic-container">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/KMYrIi_Mt8A" allowfullscreen></iframe>
-  </div>-->
-  <div class="row">
-    <div class="col-xs-6">
-      <h1>Reponsive Iframe</h1>
-    </div>
-    <div class="col-xs-6">
-      <!--<script type="text/javascript" src="iframeResizer.js"></script>-->
-      <script id='my-widget' type="text/javascript" app-src="http://localhost:7714" src="app.js" width="560" height="315"></script>
-      <!--<iframe src="http://localhost:7714" width="100%" scrolling="no"></iframe>-->
-    </div>
+<body style="overflow: hidden">
+<div class="row">
+  <div class="col-xs-6">
+    <h1>Reponsive Iframe</h1>
   </div>
-  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script type="text/javascript" src="iframeResizer.js"></script>-->
-  <!--<script type="text/javascript" src="app.js"></script>-->
-  <!--<script type="text/javascript">
-  var iframes = iFrameResize({});
-  </script>-->
-<!--<script id='my-widget' type="text/javascript" app-src="http://localhost:7714/" src="app.js" width="560" height="315"></script>-->
-
-<!--<script id='my-widget' app-src="//www.youtube.com/embed/KMYrIi_Mt8A" src="app.js" width="560" height="315" allowfullscreen></script>-->
+  <div class="col-xs-6">
+    <script id='my-widget' type="text/javascript" app-src="index.content.html" src="widget.js"></script>
+  </div>
+</div>
 </body>
 
 </html>

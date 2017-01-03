@@ -11317,11 +11317,11 @@ $(document).ready(function () {
   var iframeName = 'jQuery_iframe_1234567890';
   $('#my-widget').parent().append('<iframe src="' + src + '" width="100%" scrolling="no"></iframe>');
   var $iframes = $('iframe');
-  $iframes.each(function () {
-    $(this).ready(function () {
-      iframeResizer({});
-    });
-  });
+  // $iframes.each(function () {
+  //   $(this).ready(function(){
+  //     iframeResizer({});
+  //   })
+  // });
   iframeResizer({});
 });
 

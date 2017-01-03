@@ -11,7 +11,7 @@ module.exports = {
     name: 'default',
     entry: {
         'widget': './widget.js',
-        'widget.polyfills': './widget.polyfills.ts'
+        'widget.content': './widget.content.js'
     },
     output: {
         filename: '[name].js',
