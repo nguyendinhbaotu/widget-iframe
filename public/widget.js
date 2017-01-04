@@ -11310,14 +11310,25 @@ return jQuery;
 /***/ function(module, exports, __webpack_require__) {
 
 var $ = jQuery = __webpack_require__(2);
-var iframeResizer = __webpack_require__(1);
-$(document).ready(function () {
-  var src = $('#my-widget').attr('app-src');
-  var iframeName = 'jQuery_iframe_1234567890';
-  $('#my-widget').parent().append('<iframe src="' + src + '" width="100%" scrolling="no"></iframe>');
-  var $iframes = $('iframe');
-  iframeResizer({});
+if (!window.iframeResizer) window.iframeResizer = __webpack_require__(1);
+$('script[src="' + {"SCRIPT_URL":"https://widget-iframe.firebaseapp.com/widget.js"}.SCRIPT_URL + '"]').each(function () {
+  if (!$(this).attr('id')) {
+    var scriptId = guid();
+    var iframeId = guid();
+    $(this).attr('id', scriptId);
+    var src = $(this).attr('app-src');
+    var iframe = '<iframe id=' + iframeId + ' scriptId="' + scriptId + '" src="' + src + '" width="100%" scrolling="no" style="border: 0px"></iframe>';
+    $(this).parent().append(iframe);
+    window.iframeResizer({});
+  }
 });
+
+function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
 
 /***/ }
 /******/ ]);

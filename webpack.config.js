@@ -1,6 +1,8 @@
-require('webpack');
-require('babel-loader');
-require('awesome-typescript-loader');
+const webpack = require('webpack');
+const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
+const APP_CONFIG = {
+    SCRIPT_URL: 'https://widget-iframe.firebaseapp.com/widget.js'
+};
 const babelConfig = JSON.stringify({
     presets: [
         ['babel-preset-es2015', { modules: false }]
@@ -36,5 +38,13 @@ module.exports = {
                 test: /\.(scss|sass)$/, loaders: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'ENV': JSON.stringify(ENV),
+                'APP_CONFIG': JSON.stringify(APP_CONFIG)
+            }
+        })
+    ]
 }
