@@ -61,13 +61,12 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -1080,7 +1079,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ },
-/* 3 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11306,22 +11305,17 @@ return jQuery;
 
 
 /***/ },
-/* 4 */,
-/* 5 */
+/* 3 */,
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-var $ = jQuery = __webpack_require__(3);
-var iframeResizer = __webpack_require__(2);
+var $ = jQuery = __webpack_require__(2);
+var iframeResizer = __webpack_require__(1);
 $(document).ready(function () {
   var src = $('#my-widget').attr('app-src');
   var iframeName = 'jQuery_iframe_1234567890';
   $('#my-widget').parent().append('<iframe src="' + src + '" width="100%" scrolling="no"></iframe>');
   var $iframes = $('iframe');
-  // $iframes.each(function () {
-  //   $(this).ready(function(){
-  //     iframeResizer({});
-  //   })
-  // });
   iframeResizer({});
 });
 
